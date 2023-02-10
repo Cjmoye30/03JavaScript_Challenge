@@ -5,39 +5,36 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
 // Variable options for password
+// Can this be condensed intos a object?
 var abcOptions = "abcdefghijklmnopqrstuvwxyz"
 var numberOptions = "1,2,3,4,5,6,7,8,9";
 var specialCharacterOptions = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 var abcOptionsUpperCase = abcOptions.toUpperCase();
-
-// console.log(specialCharacters);
-// console.log(concatOptions.concat(abcOptions,numberOptions,specialCharacterOptions,abcOptionsUpperCase));
 
 // Create a function called generatePassword
 function generatePassword() {
   // Start the function each time with an empty string for concatenation and final password
   var finalPassword = "";
 
-  // Present the user with a series of prompts for password criteria
-  // Tell the user what they are able to use for a passowrd
+  // Greeting the user for the criteria that will be asked
   alert("Your password can contain: \nUpper and Lowercase characters,\nSpecial Characters,\nor Numbers");
-  alert("We will now select the criteria you want for your passowrd!")
 
-  // console.log("You password length is: \n" + passwordLength());
-  passwordLength();
-  characters();
+  var length = passwordLength();
+  var charSelection = characters();
 
-  // Showing confirmation of what we have after all of the prompts:
+  for (var i = 0; i < length; i++) {
+    var randSelection = Math.floor(Math.random() * charSelection.length);
+    finalPassword += charSelection[randSelection];
+  }
+  console.log(finalPassword);
+  return finalPassword;
 
 }
 
@@ -72,38 +69,47 @@ function passwordLength() {
   return passLength;
 }
 
-
 // Reduce the length of some of these variable names
 function characters() {
+  // Asking the user for confirmation on all of the criteria they can possibly use:
   var lowerCase = confirm("Would you like to include lowercase letters?");
   var upperCase = confirm("Would you like to include uppercase letters?");
   var numeric = confirm("Would you like to include numeric values?");
   var specialCharacters = confirm("Would you like to include special characters?");
   var passwordStringOptionsFull = "";
 
-  // Console log for confirmations:
+  // Console log for my confirmation:
   console.log("Lower Case :" + lowerCase + "\nUpper Case:" + upperCase + "\nNumberic: " + numeric + "\nSpecial Characters: " + specialCharacters);
 
-  if(!lowerCase && !upperCase && !numeric && !specialCharacters) {
+  // Re-run the function if nothing is selected
+  if (!lowerCase && !upperCase && !numeric && !specialCharacters) {
     console.log("Pick something!!!");
     alert("You have to pick something!");
     characters();
   }
 
+  // Checking for which scenarios are true and then concating the string
   // Can this also be written with a switch statement?
-
-  if(lowerCase) {
-    passwordStringOptionsFull = passwordStringOptionsFull.concat(abcOptions);
-  } 
-  if (upperCase) {
-    passwordStringOptionsFull = passwordStringOptionsFull.concat(abcOptionsUpperCase);
+  if (lowerCase) {
+    passwordStringOptionsFull += abcOptions;
   }
-   if (numeric) {
-    passwordStringOptionsFull = passwordStringOptionsFull.concat(numberOptions);
-  } 
+  if (upperCase) {
+    passwordStringOptionsFull += abcOptionsUpperCase;
+  }
+  if (numeric) {
+    passwordStringOptionsFull += numberOptions;
+  }
   if (specialCharacters) {
-    passwordStringOptionsFull = passwordStringOptionsFull.concat(specialCharacterOptions);
+    passwordStringOptionsFull += specialCharacterOptions;
   }
   console.log(passwordStringOptionsFull);
+
   return passwordStringOptionsFull;
 }
+
+function randomizer() {
+
+  var randomSelection = Math.floor(Math.random() * passwordLength().length);
+  return randomSelection;
+}
+
