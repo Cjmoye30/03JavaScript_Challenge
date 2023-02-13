@@ -1,10 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
@@ -20,7 +20,7 @@ var abcOptionsUpperCase = abcOptions.toUpperCase();
 
 // Create a function called generatePassword
 function generatePassword() {
-  // Start the function each time with an empty string for concatenation and final password
+
   var finalPassword = "";
 
   // Greeting the user for the criteria that will be asked
