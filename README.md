@@ -1,10 +1,24 @@
 # 03 JavaScript: Password Generator
 
-## Your Task
+## Description
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+- What was your motivation?
+    -My motivation for this was to create a randomly generated password by utilizing an event listener, values from the user, and string concatenation.
+    -My main motivation was to gain a better understanding of how strings behave, and how we can continually store and add variables when needed.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+- Why did you build this project?
+    -This project was built to be able to randomly select index locations from a long string full of normal and special characters thatthe user selects, and then generate a random password.
+
+- What did you learn?
+    - The return value of a function can be called and then stored as a variable.
+    - The text immediately after a backward slash will be omitted from the displayed code
+    - It is essential to break apart your code into multiple, small functions with console.logs to keep track of what is going on while you're piecing it together.
+    - The index of a string behaves the same way as the index of an array
+    - Values entered through a prompt will default to a string. I used parseInt as a solution because I thought that was easier.
+    - Recursion - calling the function within itself to "restart" it if there is an error by the user.
+    -"Confirm" returns a boolean value which allows our code to be very clean when using if statements in the characters function
+    - If statements without an else statement or the return value will keep on running even after the first if condition is met or not
+    - Honestly, a very fun and not too complicated project which I was able to complete by myself.
 
 ## User Story
 
@@ -37,64 +51,15 @@ THEN the password is either displayed in an alert or written to the page
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
+![Once the "Generate Password" button is pressed, the user is taken through prompts before being given a randomly generated password".](./Assets/03Challenge%20-%20PW%20Generator.jpg)
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+## Installation / Live Site
 
-## Grading Requirements
+[Github Pages Live Site](https://cjmoye30.github.io/03JavaScript_Challenge/)
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Credits
 
-This Challenge is graded based on the following criteria: 
+[StackBlitz Practice](https://stackblitz.com/edit/web-platform-xgikcm?file=styles.css,script.js)
+[Codepen Practice](https://codepen.io/cjmoye30/pen/KKBjgpZ?editors=1111)
+[Explanation of ParseInt](https://www.webdevelopersnotes.com/the-javascript-prompt-getting-user-input)
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

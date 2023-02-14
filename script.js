@@ -59,7 +59,7 @@ function passwordLength() {
     alert(stringError);
     passLength = 0;
     passwordLength();
-  } else if (passLength < 10 || passLength > 128) {
+  } else if (passLength < 8 || passLength > 128) {
     alert(numberError);
     passLength = 0;
     passwordLength();
