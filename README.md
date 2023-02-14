@@ -50,7 +50,8 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Mock-Up
 
-The following image shows the web application's appearance and functionality:
+The following image shows the web application's appearance and functionality.
+Part of the console log is included to illustrate behind the scenes execution.
 ![Once the "Generate Password" button is pressed, the user is taken through prompts before being given a randomly generated password".](./Assets/03Challenge%20-%20PW%20Generator.jpg)
 
 ## Installation / Live Site
