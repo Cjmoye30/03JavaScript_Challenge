@@ -3,11 +3,11 @@
 ## Description
 
 - What was your motivation?
-    -My motivation for this was to create a randomly generated password by utilizing an event listener, values from the user, and string concatenation.
-    -My main motivation was to gain a better understanding of how strings behave, and how we can continually store and add variables when needed.
+    - My motivation for this was to create a randomly generated password by utilizing an event listener, values from the user, and string concatenation.
+    - My main motivation was to gain a better understanding of how strings behave, and how we can continually store and add variables when needed.
 
 - Why did you build this project?
-    -This project was built to be able to randomly select index locations from a long string full of normal and special characters thatthe user selects, and then generate a random password.
+    - This project was built to be able to randomly select index locations from a long string full of normal and special characters thatthe user selects, and then generate a random password.
 
 - What did you learn?
     - The return value of a function can be called and then stored as a variable.
